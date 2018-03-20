@@ -4,7 +4,15 @@
   "description": "Filter out a list of sensitive words",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "babel src -d build --watch",
+    "build": "babel src -d build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
   },
   "repository": {
     "type": "git",
@@ -21,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/luisbettencourt/npm/issues"
   },
-  "homepage": "https://github.com/luisbettencourt/npm#readme"
+  "homepage": "https://github.com/luisbettencourt/npm#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^22.4.2",
+    "watch": "^1.0.2"
+  }
 }
